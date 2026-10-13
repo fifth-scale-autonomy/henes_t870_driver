@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>scale_vehicle_control</name>
+  <version>0.0.1</version>
+  <description>Control package for 1/5 scale vehicle</description>
+  <maintainer email="guswls264664@gmail.com">Hyeonjin Woo</maintainer>
+  <license>Apache License 2.0</license>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>ackermann_msgs</depend>
+  <exec_depend>python3-serial</exec_depend>  <!-- serial을 python3-serial로 변경 -->
+  <!-- 2026-10-08: GPS(ublox_gps) 제거, 이 노드가 쓰지 않는 sllidar_ros2 의존 제거.
+       ament_python 패키지는 msg 를 생성할 수 없어 rosidl 의존과 interface group 도 제거 (msg/ 는 참고용) -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
